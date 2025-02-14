@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="We simplify your financial journey, offering innovative solutions that makes managing your money seamless, secure, and stress-free. Whether it's transferring funds or managing your account, we're here to help you every step of the way.">
+  <meta name="keywords" content="financial management, online payments, secure transactions">
+  <meta name="author" content="Enebeli Chukwudi Michael">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow"> 
+
+  <!-- 
+  <meta property="og:title" content="Wealth Exchange">
+  <meta property="og:description" content="We simplify your financial journey, offering innovative solutions that make managing your money seamless, secure, and stress-free.">
+  <meta property="og:image" content="https://example.com/link-to-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:type" content="website">
+  -->
+
+  <title> MedVance </title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <div class="line top"></div>
+        <div class="line middle"></div>
+        <div class="line bottom"></div>
+      </div>
+      <div class="logo">
+        <h1> Med<span>Vance</span> </h1>
+      </div>
+
+      <div class="phone login">
+        <a href="booking.html"> Book Now </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="#about"> About </a></li>
+        <li><a href="#services"> Services </a></li>
+        <li><a href="#contact"> Contact </a></li>
+
+        <div class="desktop login">
+          <a href="booking.html">
+            Book Now
+          </a>
+        </div>
+      </ul>
+    </nav>
+    <div class="intro">
+      <div class="text">
+        <h1>Quality Healthcare at Your Fingertips</h1>
+        <p>Book virtual consultations with certified doctors anytime, anywhere.</p>
+        <a href="booking.html" class="cta-button">Book a Consultation</a>
+      </div>
+      <div class="image"> 
+        <img src="images/hero.png" alt="image of a drug">
+    </div>
+     </div>
+  </header>
+
+  <div class="sidebar" id="mySidebar">
+    <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+    <ul>
+      <li><a href="index.html"> Home </a></li>
+      <li><a href="#about"> About </a></li>
+      <li><a href="#services"> Services </a></li>
+      <li><a href="#contact"> Contact </a></li>
+    </ul>
+  </div>
+
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2> Revolutionizing Healthcare – Be Among the First!</h2>
+      <p>Experience seamless, smart, and accessible healthcare at your fingertips.Medvance is introducing an innovative digital solution to transform healthcare access in Nigeria.</p>
+
+      <div class="features">
+        <p>✅ <strong>Instant Access</strong> – Connect with certified healthcare professionals faster, easier, and virtually for quality care. </p>
+        <p>✅ <strong>Secure & Convenient</strong> – Manage your health effortlessly on a safe, user-friendly platform.</p>
+        <p>✅ <strong>Next-Generation Healthcare</strong> – Stay in control of your well-being with cutting-edge solutions.</p>
+      </div>
+
+      <h3>LIMITED EARLY ACCESS AVAILABLE!</h3>
+      <a href="#" class="cta-button two">Sign Up Now</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="services-content">
+      <h2> Our Healthcare Services</h2>
+      <p>MedvanceNG provides seamless digital healthcare solutions designed to fit your needs.</p>
+
+      <div class="services-list">
+        <div class="service-item">
+          <img src="images/virtual.jpg" alt="Virtual Healthcare">
+          <h3>Virtual Healthcare</h3>
+          <p>Consult with doctors online anytime, anywhere, for expert medical advice.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/smart.jpg" alt="Smart Health Management">
+          <h3>Smart Health Management</h3>
+          <p>Track and manage your health seamlessly with digital tools and real-time monitoring.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/wellness.jpg" alt="Personalized Wellness & Support">
+          <h3>Personalized Wellness & Support</h3>
+          <p>Receive customized health guidance and support tailored to your needs.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/drug.png" alt="Rare Medication Sourcing">
+          <h3>Rare Medication Sourcing</h3>
+          <p>Get assistance in finding hard-to-source medications when you need them most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+            <a href="mailto:hello@medvanceng.com" class="contact-item">
+                <i class="fas fa-envelope"></i> hello@medvanceng.com
+            </a>
+            <a href="tel:+2349137830358" class="contact-item">
+                <i class="fas fa-phone"></i> +234 913 783 0358
+            </a>
+            <a href="https://wa.me/2349137830358" class="contact-item" target="_blank">
+                <i class="fab fa-whatsapp"></i> +234 913 783 0358
+            </a>
+            <a href="https://www.instagram.com/medvance_ng" class="contact-item" target="_blank">
+                <i class="fab fa-instagram"></i> @medvance_ng
+            </a>
+        <p>© 2025 MedVance. All rights reserved.</p>
+</footer>
+  <script src="index.js"> </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedVance| Virtual Consultation</title>
+  <link rel="stylesheet" href="booking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <div class="line top"></div>
+        <div class="line middle"></div>
+        <div class="line bottom"></div>
+      </div>
+      <div class="logo">
+        <h1> Med<span>Vance</span> </h1>
+      </div>
+
+      <div class="phone login">
+        <a href="index.html"> Home </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="index.html#about"> About </a></li>
+        <li><a href="index.html#services"> Services </a></li>
+        <li><a href="index.html#contact"> Contact </a></li>
+
+        <div class="desktop login">
+          <a href="index.html">
+            Return Home
+          </a>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <aside class="sidebar" id="mySidebar">
+    <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+    <ul>
+      <li><a href="index.html"> Home </a></li>
+      <li><a href="index.html#about"> About </a></li>
+      <li><a href="index.html#services"> Services </a></li>
+      <li><a href="index.html#contact"> Contact </a></li>
+    </ul>
+  </aside>
+
+  <div id="step-1">
+    <main>
+      <div class="appointment-card">
+        <div class="doctor-info">
+          <img src="images/doctor.jpg" alt="Dr. Becky">
+          <span>Dr. Becky</span>
+        </div>
+        <h2>Book Appointment</h2>
+        <p><i class="fas fa-clock"></i> 30 mins</p>
+      </div>
+
+      <div class="calendar-container">
+        <label>SELECT A DATE</label>
+        <div id="appointment-calendar"></div>
+      </div>
+
+      <div class="time-container">
+        <label>SELECT A TIME </label>
+        <div id="appointment-time"></div>
+      </div>
+    </main>
+
+    <div class="selection-summary">
+      <h3>Selected Appointment</h3>
+      <p> <strong> Date: </strong> <span id="selected-date"> Not selected </span></p>
+      <p> <strong> Time: </strong> <span id="selected-time"> Not selected </span></p>
+
+      <button id="next-step-btn" disabled> Continue </button>
+    </div>
+  </div>
+
+  <div id="step-2" class="hidden">
+    <div class="step-header">
+      <span id="prev-step" title="Go to Previous">
+        <i class="fas fa-arrow-left"></i>
+      </span>
+      <h2>Book Appointment</h2>
+    </div>
+
+    <div class="card">
+      <img src="https://flagcdn.com/w40/ng.png" alt="Nigerian Flag" class="flag-icon">
+      <span>Nigerian Time</span>
+
+      <p id="appointment-time-range"></p>
+      <p id="appointment-date"></p>
+    </div>
+   <section>
+    <div class="input-group">
+      <input type="text" id="full-name" placeholder=" " required />
+      <label for="full-name">Full Name <span class="required">*</span></label>
+    </div>
+
+    <div class="input-group">
+      <input type="email" id="email" placeholder=" " required />
+      <label for="email">Email <span class="required">*</span></label>
+    </div>
+
+    <div class="input-group">
+      <input type="tel" id="phone" placeholder=" " required />
+      <label for="phone">Phone Number <span class="required">*</span></label>
+    </div>
+
+    <button type="button" id="to-step-3" disabled>Continue</button>
+  </div>
+</section>
+  <div id="step-3" class="hidden">
+    <div class="step-header">
+      <span id="prev-step-3" title="Go to Previous">
+        <i class="fas fa-arrow-left"></i>
+      </span>
+      <h2>Book Appointment</h2> </div>
+    <div class="card">
+    <div class="card-header">
+      <span class="flag"> &#127475;&#127468 </span>
+      <span>Nigerian Time</span>
+    </div>
+    <div class="card-body">
+      <p><span id="time-range"></span></p>
+      <p><span id="display-date"></span></p>
+      <p><span id="display-name"></span></p>
+      <p> <span id="display-email"></span></p>
+      <p><span id="display-phone"></span></p>
+    </div>
+  </div>
+    
+   <div id="service-form-container">
+  <form id="service-form">
+    <h2>Select Services <span class="required">*</span></h2>
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="services" value="General Consultation">
+        General Consultation
+      </label>
+      <label>
+        <input type="checkbox" name="services" value="Specialist Consultation">
+        Specialist Consultation
+      </label>
+      <label>
+        <input type="checkbox" name="services" value="Follow-up Appointment">
+        Follow-up Appointment
+      </label>
+      <!-- Add additional services as needed -->
+    </div>
+
+    <h3>Guests (optional)</h3>
+    <input type="text" id="guests" placeholder="Email or phone">
+
+    <h3>Description / Additional Notes</h3>
+    <textarea id="description" placeholder="Enter additional details..."></textarea>
+
+    <button id="submit-btn" type="submit" class="btn" disabled>Submit</button>
+  </form>
+  <div id="service-error" class="error-message"></div>
+</div>
+  </div>
+
+  
+ <div id="step-4" class="hidden">
+   
+
+  <div class="success-message">
+  <div  class="appointment">
+    <span class="checkmark">&#10004;</span>
+    <h2>Successful</h2>
+    <h3>You're scheduled with Dr. Becky</h3>
+    
+    <span>30 Minutes Meeting</span>
+    <h3 id="selected-time-range">Time Range: N/A</h3>
+    <span id="select-date">Date: N/A</span>
+
+    <h4>&#127475;&#127468; Nigerian Time</h4> </div>
+    
+    <div class="client">
+<h2> CLIENT DETAILS </h2>
+    <p><strong>Full Name:</strong> <span id="retrieved-full-name">N/A</span></p>
+    <p><strong>Email:</strong> <span id="retrieved-email">N/A</span></p>
+    <p><strong>Phone:</strong> <span id="retrieved-phone">N/A</span></p>
+    <p><strong>Service(s):</strong> <span id="retrieved-services">N/A</span></p>
+    <p><strong>Guests:</strong> <span id="retrieved-guests">None</span></p>
+    <p><strong>Description:</strong> <span id="retrieved-description">None</span></p>
+
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+    </div>
+</div>
+
+  
+  <div id="step-indicator">
+    <span class="step active">1</span>
+    <span class="step">2</span>
+    <span class="step">3</span>
+  </div>
+  <script src="booking.js"> </script>
+  <script src="index.js"> </script>
+</body>
+
+</html>
