@@ -349,12 +349,12 @@ main {
 #prev-step, #prev-step-3{
   cursor: pointer;
   font-size: 30px;
-  color: var(--main);
+  color: vwhite;
 }
 .step-header h2 {
   width: 200px;
   font-size: 1.35rem;
-  color: var(--main);
+  color: white
 }
 
 .card {
@@ -637,7 +637,7 @@ footer {
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 footer a {
   color: white;
@@ -659,4 +659,10 @@ footer p {
   margin-top: 30px;
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+article {
+  background: linear-gradient(to right, #0077b6, #003049);
+  padding: 100px 20px;
+  color: white;
 }
