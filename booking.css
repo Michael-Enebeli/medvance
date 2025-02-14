@@ -626,3 +626,37 @@ margin: 20px auto;
 .success-message .btn:hover {
  background-color: var(--main);
  }
+
+ 
+footer {
+  background-color: #003049;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 40px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer i {
+  font-size: 1.3rem;
+}
+
+footer a:hover {
+  color: #ff006e;
+}
+footer p {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
