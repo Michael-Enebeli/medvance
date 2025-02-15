@@ -70,20 +70,21 @@ function add30Minutes(timeStr) {
   let [time, period] = timeStr.split(" ");
   let [hours, minutes] = time.split(":").map(Number);
 
-  minutes += 30;
-  if (minutes >= 60) {
-    minutes -= 60;
-    hours += 1;
-  }
-  if (hours === 12) {
-    period = period === "AM" ? "PM" : "AM"; 
-  } else if (hours > 12) {
-    hours -= 12; 
-  } else if (hours === 0) {
-    hours = 12; 
+  if (period === "AM") {
+    if (hours === 12) hours = 0;
+  } else {
+    if (hours !== 12) hours += 12; 
   }
 
-  return `${timeStr} - ${hours}:${minutes.toString().padStart(2, "0")} ${period}`;
+  let totalMinutes = hours * 60 + minutes;
+  totalMinutes = (totalMinutes + 30) % 1440; 
+  let newHours24 = Math.floor(totalMinutes / 60);
+  let newMinutes = totalMinutes % 60;
+  let newPeriod = newHours24 < 12 ? "AM" : "PM";
+  let newHours = newHours24 % 12;
+  if (newHours === 0) newHours = 12;
+
+  return `${timeStr} - ${newHours}:${newMinutes.toString().padStart(2, "0")} ${newPeriod}`;
 }
 
 nextStepBtn.addEventListener("click", () => {
