@@ -349,12 +349,13 @@ footer {
     gap: 10px;
     align-items: center;
 }
-footer a {
+footer > a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
     gap: 8px;
 }
 
@@ -369,4 +370,20 @@ footer p {
     margin-top: 30px;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+footer span {
+  font-size: 1rem;
+  margin-top: 20px;
+  display: block;
+ }
+ footer span a {
+  color: inherit;
+  cursor: none;
+ }
+
+ @media (hover: hover) and (pointer: fine) {
+footer a:hover {
+    cursor: pointer; 
+  }
 }

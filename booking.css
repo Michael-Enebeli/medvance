@@ -16,15 +16,18 @@ body {
   padding: 0;
   background: #caf0f8;
 }
+
 .nav-links {
   display: none;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5% 3% 1.5% 3%;
 }
+
 .hamburger {
   width: 30px;
   height: 25px;
@@ -32,19 +35,24 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
+
 .hamburger .line {
   background-color: #ff006e;
   height: 3px;
 }
+
 .hamburger .top {
   width: 29px;
 }
+
 .hamburger .middle {
   width: 24px;
 }
+
 .hamburger .bottom {
   width: 15px;
 }
+
 header .logo {
   margin-left: 2%;
   font-family: "Raleway", sans-serif;
@@ -52,9 +60,11 @@ header .logo {
   color: #003049;
   font-size: 1.1rem;
 }
+
 header span {
   color: #ff006e;
 }
+
 nav .phone a {
   display: block;
   align-items: center;
@@ -67,14 +77,17 @@ nav .phone a {
   cursor: none;
   border-radius: 5px;
 }
+
 nav .phone a:hover {
   background-color: #003049;
   transform: scale(1.05);
 }
+
 nav .login a:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5);
 }
+
 .sidebar {
   z-index: 4;
   position: fixed;
@@ -85,14 +98,17 @@ nav .login a:focus {
   transition: all 0.5s ease;
   transform: translateX(-100%);
 }
+
 .sidebar.open {
   transform: translateX(0);
 }
+
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin-top: 50px;
 }
+
 .sidebar ul li a {
   text-align: center;
   color: white;
@@ -102,9 +118,11 @@ nav .login a:focus {
   padding: 20px;
   transition: background-color 0.1s;
 }
+
 .sidebar li a:hover {
   background-color: #ff006e;
 }
+
 .close-btn {
   background: none;
   border: none;
@@ -113,6 +131,7 @@ nav .login a:focus {
   padding: 17px 50px;
   color: white;
 }
+
 @media (min-width: 1024px) {
   .nav-links {
     display: flex;
@@ -127,14 +146,17 @@ nav .login a:focus {
     padding: 10px 20px;
     transition: background-color 0.3s;
   }
+
   .nav-links li a:hover {
     background-color: #ff006e;
     color: white;
   }
+
   .hamburger,
   .phone {
     display: none;
   }
+
   .desktop a {
     align-items: center;
     background-color: #ff006e;
@@ -147,19 +169,23 @@ nav .login a:focus {
     cursor: pointer;
     transform: scale(11.05) !important;
   }
+
   .desktop a:hover {
     background-color: #003049;
     transform: scale(1.05);
   }
+
   .sidebar {
     display: none;
   }
 }
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .appointment-card {
   background: white;
   width: 300px;
@@ -193,6 +219,7 @@ main {
   font-weight: bold;
   color: var(--main);
 }
+
 .appointment-card h2 {
   margin: 15px 0 10px;
   color: #003049;
@@ -202,20 +229,24 @@ main {
   font-size: 14px;
   color: var(--main);
 }
+
 .appointment-card p i {
   margin-right: 5px;
   color: #003049;
 }
+
 .calendar-container {
   text-align: center;
   margin-top: 50px;
 }
+
 .calendar-container label,
 .time-container label {
   font-weight: bold;
   margin: 20px;
   display: block;
 }
+
 .flatpickr-calendar {
   display: block;
   max-width: 300px;
@@ -224,6 +255,7 @@ main {
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 .flatpickr-day {
   border-radius: 50%;
 }
@@ -236,6 +268,7 @@ main {
 .flatpickr-day.today {
   border: 2px solid #007bff !important;
 }
+
 .unavailable-day {
   color: red !important;
   text-decoration: line-through;
@@ -263,7 +296,9 @@ main {
 .flatpickr-current-month {
   cursor: default !important;
 }
+
 @media (min-width: 1024px) {
+
   .flatpickr-prev-month,
   .flatpickr-next-month,
   .flatpickr-monthDropdown-months,
@@ -272,21 +307,26 @@ main {
     cursor: pointer !important;
   }
 }
+
 .selection-summary {
   text-align: center;
   margin: 50px 0;
 }
+
 .selection-summary h3 {
   font-weight: bold;
   margin: 20px 0;
 }
+
 .selection-summary p {
   margin: 20px auto;
   text-align: left;
   width: 70%;
   max-width: 300px;
 }
-#next-step-btn, .btn {
+
+#next-step-btn,
+.btn {
   width: 100%;
   max-width: 200px;
   padding: 10px;
@@ -305,9 +345,11 @@ main {
   cursor: pointer;
   opacity: 1;
 }
+
 #next-step-btn.enabled:hover {
   background-color: var(--main);
 }
+
 #step-indicator {
   display: flex;
   justify-content: center;
@@ -346,11 +388,13 @@ main {
   margin: 40px auto 20px auto;
 }
 
-#prev-step, #prev-step-3{
+#prev-step,
+#prev-step-3 {
   cursor: pointer;
   font-size: 30px;
   color: vwhite;
 }
+
 .step-header h2 {
   width: 200px;
   font-size: 1.35rem;
@@ -386,6 +430,7 @@ main {
   color: var(--main);
   font-weight: 500;
 }
+
 .input-group {
   position: relative;
   margin: 20px auto;
@@ -415,8 +460,8 @@ main {
   margin: 0px 5px 25px 0;
 }
 
-.input-group input:focus + label,
-.input-group input:not(:placeholder-shown) + label {
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
   top: 0px;
   font-size: 12px;
   color: var(--main);
@@ -445,22 +490,27 @@ main {
   cursor: pointer;
   opacity: 1;
 }
+
 #to-step-3.enabled:hover {
   background-color: var(--main);
 }
+
 .input-group input.error {
   border: 2px solid red;
   outline: none;
 }
+
 .error-message {
   color: red;
   font-size: 12px;
   margin-top: 5px;
   display: block;
 }
-.required { 
+
+.required {
   color: red;
 }
+
 .card {
   background: white;
   padding: 15px;
@@ -485,6 +535,7 @@ main {
   font-weight: 500;
   text-align: left;
 }
+
 .card-body span {
   font-weight: 500;
 }
@@ -496,7 +547,7 @@ main {
   padding: 15px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   color: var(--main);
 }
 
@@ -548,13 +599,16 @@ main {
   color: #fff;
   cursor: not-allowed;
 }
+
 #submit-btn.enabled {
   cursor: pointer;
   opacity: 1;
 }
+
 #submit-btn.enabled:hover {
   background-color: var(--main) !important;
 }
+
 .error-message {
   color: red;
   font-size: 14px;
@@ -573,9 +627,12 @@ main {
   display: flex;
   max-width: 355px;
   margin: 20px auto;
-  
+
 }
-.appointment, .client, section {
+
+.appointment,
+.client,
+section {
   flex-direction: column;
   gap: 15px;
   display: flex;
@@ -587,25 +644,28 @@ main {
   color: var(--main);
   font-weight: 500;
   max-width: 300px;
-  margin:0 auto;
+  margin: 0 auto;
 }
+
 .success-message .checkmark {
   font-size: 40px;
   color: green;
   display: block;
-border: 3px solid green;
-Width: 70px;
-Height: 70px;
-margin: 0 auto;
+  border: 3px solid green;
+  Width: 70px;
+  Height: 70px;
+  margin: 0 auto;
   border-radius: 50%
 }
 
 .success-message h2 {
   margin: 30px 0 15px 0;
 }
-.success-message  h4 {
+
+.success-message h4 {
   margin-bottom: 25px;
 }
+
 .success-message p {
   margin: 5px 0;
   text-align: left;
@@ -615,19 +675,19 @@ margin: 0 auto;
   margin-top: 20px;
   opacity: 1;
   width: 200px;
-margin: 20px auto;
+  margin: 20px auto;
   text-decoration: none;
 }
 
 .success-message .btn {
- cursor: pointer;
+  cursor: pointer;
 }
 
 .success-message .btn:hover {
- background-color: var(--main);
- }
+  background-color: var(--main);
+}
 
- 
+
 footer {
   background-color: #003049;
   padding: 80px 20px;
@@ -637,15 +697,17 @@ footer {
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin-top: 0px;
 }
-footer a {
+
+footer>a {
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
   gap: 8px;
+  margin-top: 10px;
 }
 
 footer i {
@@ -655,10 +717,28 @@ footer i {
 footer a:hover {
   color: #ff006e;
 }
+
 footer p {
   margin-top: 30px;
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+footer span {
+  font-size: 1rem;
+  margin-top: 20px;
+  display: block;
+}
+
+footer span a {
+  color: inherit;
+  cursor: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  footer a:hover {
+    cursor: pointer;
+  }
 }
 
 article {
